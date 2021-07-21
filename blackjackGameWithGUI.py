@@ -12,6 +12,7 @@ pl_c_2 = random.randint(1, 13)
 def royalConversion(cardnumber):
   if cardnumber > 10:
     cardnumber = 10
+    return cardnumber
 
 def calculateSum(playercards):
   sum = 0
@@ -36,10 +37,10 @@ def aceHandler(sumOfCards, playercards):
       return sumOfCards
 
  
-royalConversion(de_c_1)
-royalConversion(de_c_2)
-royalConversion(pl_c_1)
-royalConversion(pl_c_2)
+de_c_1 = royalConversion(de_c_1)
+de_c_2 = royalConversion(de_c_2)
+pl_c_1 = royalConversion(pl_c_1)
+pl_c_2 = royalConversion(pl_c_2)
  
 plCards = [pl_c_1, pl_c_2]
 dlCards = [de_c_1, de_c_2]
@@ -57,7 +58,7 @@ def drawCard():
     print("Click Draw !!!")
     hit_card = random.randint(1, 13)
     print(str(hit_card))
-    royalConversion(hit_card)
+    hit_card = royalConversion(hit_card)
     plCards.append(hit_card)
     tempsum = calculateSum(plCards)
     tempsum = aceHandler(tempsum, plCards)
@@ -77,7 +78,7 @@ def passToDealer():
     while sum_of_de_c < random.randint(15, 18) and sum_of_de_c < sum_of_pl_c :
         de_hit_card = random.randint(1, 13)
     
-        royalConversion(de_hit_card)
+        de_hit_card = royalConversion(de_hit_card)
         if de_hit_card == 1:
           if sum_of_de_c >= 11 :
             sum_of_de_c = sum_of_de_c + de_hit_card
