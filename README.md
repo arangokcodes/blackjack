@@ -1,3 +1,3 @@
 # blackjack
 This is a "Blackjack Card Game" code
-Collaborated w/@emresolaaksu <https://github.com/emresolaaksu>
+Collaborated <https://github.com/ArmiTheWiz> <https://github.com/emresolaaksu>
