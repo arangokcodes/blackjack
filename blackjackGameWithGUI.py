@@ -13,6 +13,9 @@ def royalConversion(cardnumber):
   if cardnumber > 10:
     cardnumber = 10
     return cardnumber
+  else:
+    cardnumber = cardnumber
+    return cardnumber
 
 def calculateSum(playercards):
   sum = 0
@@ -36,12 +39,10 @@ def aceHandler(sumOfCards, playercards):
       sumOfCards = calculateSum(playercards)
       return sumOfCards
 
- 
 de_c_1 = royalConversion(de_c_1)
 de_c_2 = royalConversion(de_c_2)
 pl_c_1 = royalConversion(pl_c_1)
 pl_c_2 = royalConversion(pl_c_2)
- 
 plCards = [pl_c_1, pl_c_2]
 dlCards = [de_c_1, de_c_2]
 
